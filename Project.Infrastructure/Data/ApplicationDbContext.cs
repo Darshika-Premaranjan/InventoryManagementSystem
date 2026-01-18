@@ -12,6 +12,7 @@ namespace Project.Infrastructure.Data
 
         #region DbSet Section
         public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         #endregion
 

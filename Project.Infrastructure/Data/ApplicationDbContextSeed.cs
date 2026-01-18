@@ -29,8 +29,8 @@ namespace Project.Infrastructure.Data
                 // Adding Users
                 if (!appContext.Users.Any())
                 {
-                    var defaultUser = new User { FullName = "Admin User", UserName = "admin", RoleId = 1, Email = "admin@app.com", EntryDate = DateTime.Now, IsActive = true };
-                    IdentityResult userResult = await UserManager.CreateAsync(defaultUser, "admin@");
+                    var defaultUser = new User { FullName = "Kawser Hamid", UserName = "hamid", RoleId = 1, Email = "kawser2133@gmail.com", EntryDate = DateTime.Now, IsActive = true };
+                    IdentityResult userResult = await UserManager.CreateAsync(defaultUser, "Hamid@12");
                     if (userResult.Succeeded)
                     {
                         // here we assign the new user role 

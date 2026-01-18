@@ -16,6 +16,8 @@ namespace Project.API.Extensions
             services.AddScoped<IRoleService, RoleService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+
 
             #endregion
 
@@ -24,6 +26,8 @@ namespace Project.API.Extensions
             services.AddTransient<IRoleRepository, RoleRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IAuthRepository, AuthRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+
 
             #endregion
 

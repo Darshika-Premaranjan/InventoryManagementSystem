@@ -19,6 +19,10 @@ namespace Project.API.Extensions
                 cfg.CreateMap<ProductCreateViewModel, Product>();
                 cfg.CreateMap<ProductUpdateViewModel, Product>();
 
+                cfg.CreateMap<Category, CategoryViewModel>();
+                cfg.CreateMap<CategoryCreateViewModel, Category>();
+                cfg.CreateMap<CategoryUpdateViewModel, Category>();
+
                 cfg.CreateMap<Role, RoleViewModel>();
                 cfg.CreateMap<RoleCreateViewModel, Role>();
                 cfg.CreateMap<RoleUpdateViewModel, Role>();
@@ -32,6 +36,10 @@ namespace Project.API.Extensions
             services.AddSingleton<IBaseMapper<Product, ProductViewModel>, BaseMapper<Product, ProductViewModel>>();
             services.AddSingleton<IBaseMapper<ProductCreateViewModel, Product>, BaseMapper<ProductCreateViewModel, Product>>();
             services.AddSingleton<IBaseMapper<ProductUpdateViewModel, Product>, BaseMapper<ProductUpdateViewModel, Product>>();
+
+            services.AddSingleton<IBaseMapper<Category, CategoryViewModel>, BaseMapper<Category, CategoryViewModel>>();
+            services.AddSingleton<IBaseMapper<CategoryCreateViewModel, Category>, BaseMapper<CategoryCreateViewModel, Category>>();
+            services.AddSingleton<IBaseMapper<CategoryUpdateViewModel, Category>, BaseMapper<CategoryUpdateViewModel, Category>>();
 
             services.AddSingleton<IBaseMapper<Role, RoleViewModel>, BaseMapper<Role, RoleViewModel>>();
             services.AddSingleton<IBaseMapper<RoleCreateViewModel, Role>, BaseMapper<RoleCreateViewModel, Role>>();

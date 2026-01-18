@@ -16,5 +16,8 @@ namespace Project.Core.Entities.General
         [StringLength(maximumLength: 350)]
         public string? Description { get; set; }
         public bool IsActive { get; set; }
+        public int? CategoryId { get; set; }
+        [ForeignKey(nameof(CategoryId))]
+        public Category? Category { get; set; }
     }
 }
