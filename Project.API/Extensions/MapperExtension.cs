@@ -23,6 +23,10 @@ namespace Project.API.Extensions
                 cfg.CreateMap<CategoryCreateViewModel, Category>();
                 cfg.CreateMap<CategoryUpdateViewModel, Category>();
 
+                cfg.CreateMap<Supplier, SupplierViewModel>();
+                cfg.CreateMap<SupplierCreateViewModel, Supplier>();
+                cfg.CreateMap<SupplierUpdateViewModel, Supplier>();
+
                 cfg.CreateMap<Role, RoleViewModel>();
                 cfg.CreateMap<RoleCreateViewModel, Role>();
                 cfg.CreateMap<RoleUpdateViewModel, Role>();
@@ -40,6 +44,11 @@ namespace Project.API.Extensions
             services.AddSingleton<IBaseMapper<Category, CategoryViewModel>, BaseMapper<Category, CategoryViewModel>>();
             services.AddSingleton<IBaseMapper<CategoryCreateViewModel, Category>, BaseMapper<CategoryCreateViewModel, Category>>();
             services.AddSingleton<IBaseMapper<CategoryUpdateViewModel, Category>, BaseMapper<CategoryUpdateViewModel, Category>>();
+
+            services.AddSingleton<IBaseMapper<Supplier, SupplierViewModel>, BaseMapper<Supplier, SupplierViewModel>>();
+            services.AddSingleton<IBaseMapper<SupplierCreateViewModel, Supplier>, BaseMapper<SupplierCreateViewModel, Supplier>>();
+            services.AddSingleton<IBaseMapper<SupplierUpdateViewModel, Supplier>, BaseMapper<SupplierUpdateViewModel, Supplier>>();
+
 
             services.AddSingleton<IBaseMapper<Role, RoleViewModel>, BaseMapper<Role, RoleViewModel>>();
             services.AddSingleton<IBaseMapper<RoleCreateViewModel, Role>, BaseMapper<RoleCreateViewModel, Role>>();

@@ -11,6 +11,7 @@ namespace Project.Core.Entities.Business
         public int Quantity { get; set; }
         public string? Description { get; set; }
         public int ? CategoryId { get; set; }
+        public int? SupplierId { get; set; }
         public bool IsActive { get; set; }
     }
 
@@ -21,6 +22,7 @@ namespace Project.Core.Entities.Business
         [Required, StringLength(maximumLength: 100, MinimumLength = 2)]
         public string? Name { get; set; }
         public int ? CategoryId{ get; set; }
+        public int? SupplierId { get; set; }
         [Required, Range(0.01, float.MaxValue)]
         public double Price { get; set; }
         public int Quantity { get; set; }
@@ -37,6 +39,7 @@ namespace Project.Core.Entities.Business
         [Required, StringLength(maximumLength: 100, MinimumLength = 2)]
         public string? Name { get; set; }
         public int? CategoryId { get; set; }
+        public int? SupplierId { get; set; }
         [Required, Range(0.01, float.MaxValue)]
         public double Price { get; set; }
         public int Quantity { get; set; }

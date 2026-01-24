@@ -19,5 +19,8 @@ namespace Project.Core.Entities.General
         public int? CategoryId { get; set; }
         [ForeignKey(nameof(CategoryId))]
         public Category? Category { get; set; }
+        public int? SupplierId { get; set; }
+        [ForeignKey(nameof(SupplierId))]
+        public Supplier? Supplier { get; set; }
     }
 }

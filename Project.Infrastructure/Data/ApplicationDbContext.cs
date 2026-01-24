@@ -13,7 +13,7 @@ namespace Project.Infrastructure.Data
         #region DbSet Section
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-
+        public DbSet<Supplier> Suppliers { get; set; }
         #endregion
 
         protected override void OnModelCreating(ModelBuilder builder)
